@@ -1,0 +1,109 @@
+    <Html>
+    <head>
+    <title>
+    Registration Page
+    </title>
+    </head>
+    <body bgcolor="Lightskyblue">
+    <center> <h1> User Registration Form </h1> </center>
+    <br>
+    <br>
+
+    <form action="confirm" method="POST">
+     {% csrf_token %}
+    <label> Firstname: </label>
+    <input type="text" name="firstname" size="15"/> <br> <br>
+
+    <label> Lastname: </label>
+    <input type="text" name="lastname" size="15"/> <br> <br>
+    <label> Age:</label>
+    <input type="text" name="age" size="5"/> <br> <br>
+
+    <label>
+    Gender :
+    </label><br>
+    <input type="radio" name="male" /> Male <br>
+    <input type="radio" name="female" /> Female <br>
+    <input type="radio" name="other" /> Other
+    <br>
+    <br>
+
+    <label>
+    Phone :
+    </label>
+    <input type="text" name="country code"  value="+91" size="2"/>
+    <input type="text" name="phone" size="10"/> <br> <br>
+    Address
+    <br>
+    <textarea cols="80" rows="5" value="address">
+    </textarea>
+    <br> <br>
+    Email:
+    <input type="email" id="email" name="email"/> <br>
+    <br> <br>
+      <label>
+    Department :
+    </label>
+    <select>
+    <option value="Department">Department</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Commerce">Commerce</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Physics">Physics</option>
+
+    </select>
+    <br>
+    <br>
+     <label>
+    Course :
+    </label>
+    <select>
+    <option value="Course">Course</option>
+    <option value="BCA">B.Sc chemistry</option>
+    <option value="BBA">B.Sc physics</option>
+    <option value="B.Tech">B.Tech</option>
+    <option value="M.Tech">M.Tech</option>
+    <option value="MBA">MBA</option>
+    <option value="MCA">MCA</option>
+
+    </select>
+    <br>
+    <br>
+       <label>
+    Purpose :
+    </label>
+    <select>
+    <option value="Purpose">Purpose</option>
+    <option value="For Enquiry">For enqiry</option>
+    <option value="Place Order">Place order</option>
+    <option value="Return">Return</option>
+    </select>
+    <br>
+    <br>
+
+    Materials provide:
+    <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          debit Note Book
+        </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+       exam pappers
+      </label>
+    </div>
+
+    <br> <br>
+
+     <button type="submit">Submit</button>
+    </form>
+    <form action="" method="POST">
+
+        {% csrf_token %}
+        <input type="button" value="Logout"/>
+
+    </form>
+    </body>
+    </html>
